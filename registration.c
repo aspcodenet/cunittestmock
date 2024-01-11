@@ -26,8 +26,10 @@ REGISTRATION_STATUS registerUser(const char *email){
   //   return REGISTRATION_STATUS_TOO_MANY_REGISTRATIONS_TODAY;
   // }
   //if(...) return REGISTRATION_STATUS_OK;  
+  //userSave(email);
   userSave(email);
-    //sendWelcomeEmailToUser(email);
+  
+      //sendWelcomeEmailToUser(email);
     return REGISTRATION_STATUS_OK;  
 }
 
