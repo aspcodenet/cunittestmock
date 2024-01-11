@@ -11,7 +11,7 @@ int main(){
             case REGISTRATION_STATUS_OK:
             printf("OK\n");
             break;
-            case REGISTRATION_STATUS_WRONG_EMAIL_DOMAIN:
+            case REGISTRATION_STATUS_WRONG_EMAIL_DOMAIN: // hej.se, hej.com stefan@hej.se stefan@stefan.se
             printf("Not valid email\n");
             break;
             case REGISTRATION_STATUS_ALREADY_REGISTERED:

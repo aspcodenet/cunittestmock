@@ -5,6 +5,7 @@
 #include "email.h"
 
 
+
 bool verifyEmailDomain(const char *email){
     if(strstr(email,"hej.se") ||  strstr(email,"hej.com") ){
         return true;
@@ -21,11 +22,12 @@ REGISTRATION_STATUS registerUser(const char *email){
   if (userExists(email)){
     return REGISTRATION_STATUS_ALREADY_REGISTERED;
   }
-  if (userRegistrationsToday() >=10 ){
-    return REGISTRATION_STATUS_TOO_MANY_REGISTRATIONS_TODAY;
-  }
-    userSave(email);
-    sendWelcomeEmailToUser(email);
-    return REGISTRATION_STATUS_OK;    
+  // if (userRegistrationsToday() >=10 ){
+  //   return REGISTRATION_STATUS_TOO_MANY_REGISTRATIONS_TODAY;
+  // }
+  //if(...) return REGISTRATION_STATUS_OK;  
+  userSave(email);
+    //sendWelcomeEmailToUser(email);
+    return REGISTRATION_STATUS_OK;  
 }
 
